@@ -1,0 +1,26 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier" // Add this as the last entry to disable conflicting rules
+    ],
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "rules": {
+      "prettier/prettier": "error", // Show Prettier issues as ESLint errors
+      "react/prop-types": "off", // Example: Disable prop-types for React projects using TypeScript
+      "@typescript-eslint/no-unused-vars": ["warn"], // Adjust TypeScript-specific rules
+      "semi": ["error", "always"] // Example: Enforce semicolons
+    },
+    "settings": {
+      "react": {
+        "version": "detect" // Automatically detect the React version
+      }
+    }
+  }
+  
