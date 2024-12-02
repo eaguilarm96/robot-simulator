@@ -5,9 +5,13 @@ import pluginReact from 'eslint-plugin-react'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
+  { baseDirectory: path.resolve() },
   { languageOptions: { globals: globals.browser } },
-  { extends: ['eslint:recommended', 'plugin:prettier/recommended'] },
+  {
+    parser: '@typescript-eslint/parser',
+    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+    plugins: ['import', 'prettier'],
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,

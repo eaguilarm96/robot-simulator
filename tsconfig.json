@@ -1,4 +1,14 @@
 {
   "files": [],
-  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "module": "ESNext",
+    "preserveSymlinks": true,
+    "lib": ["ESNext", "dom", "dom.iterable"],
+    "paths": {
+      "@astrazeneca-eric/*": ["src/*"]
+    }
+  }
 }
