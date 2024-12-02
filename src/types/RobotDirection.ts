@@ -1,4 +1,4 @@
-export enum Direction {
+export enum RobotDirection {
   NORTH = 'NORTH',
   EAST = 'EAST',
   SOUTH = 'SOUTH',
