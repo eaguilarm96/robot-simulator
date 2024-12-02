@@ -6,6 +6,9 @@
     "baseUrl": "./",
     "module": "ESNext",
     "preserveSymlinks": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "moduleResolution": "node",
     "lib": ["ESNext", "dom", "dom.iterable"],
     "paths": {
       "@astrazeneca-eric/*": ["src/*"]

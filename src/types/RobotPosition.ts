@@ -1,7 +1,7 @@
-import { Direction } from './RobotDirection'
+import { RobotDirection } from './RobotDirection'
 
 export type RobotPosition = {
   x: number
   y: number
-  direction: Direction
+  direction: RobotDirection
 }
