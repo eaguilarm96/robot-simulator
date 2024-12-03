@@ -1,50 +1,51 @@
-# React + TypeScript + Vite
+# Toy Robot Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application simulates a toy robot moving on a 5x5 square tabletop. The robot can move freely around the surface but is prevented from falling off the table. The app includes user commands to control the robot's movement, direction, and placement, all while ensuring that invalid actions are appropriately handled.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Tabletop Simulation:** A 5x5 grid represents the tabletop.
+- **Robot Controls:**
+  - Place the robot on the tabletop at a specific position and direction.
+  - Move the robot forward in the current direction.
+  - Rotate the robot left or right.
+  - Prevent invalid moves that would cause the robot to fall off the tabletop.
+- **User Feedback:** Displays the current position and direction of the robot.
+- **Customizable:** The application is built with modular, reusable logic to enable future expansions.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Follow these steps to set up the project on your local machine:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Install dependencies with `npm install`:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```bash
+   npm install
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Run the application with `npm run dev`:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Open the application in your browser at `http://localhost:5173`.
+
+## Scripts
+
+The following scripts are available to run and manage the project:
+
+- `npm run dev`: Starts the development server.
+- `npm run build`: Builds the application for production.
+- `npm run tsc`: Compiles TypeScript files to JavaScript.
+- `npm run lint`: Runs linting checks on TypeScript files.
+- `npm run format`: Formats TypeScript files using Prettier.
+- `npm run test`: Runs tests using Jest.
+
+## License
+
+This project is licensed under the MIT license.
