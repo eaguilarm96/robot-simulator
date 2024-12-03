@@ -1,5 +1,5 @@
-import './App.css'
 import { Robot } from './components/Robot'
+import './App.css'
 
 function App() {
   return (

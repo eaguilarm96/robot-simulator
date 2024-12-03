@@ -1,4 +1,4 @@
-import { RobotPosition } from '../../../../types/RobotPosition'
+import { RobotPosition } from '@astrazeneca-eric/types'
 import { getRotation } from '@astrazeneca-eric/utils/robotLogic'
 import './Tabletop.css'
 

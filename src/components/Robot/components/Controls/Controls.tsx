@@ -26,6 +26,7 @@ export const Controls: React.FC<ControlsProps> = React.memo(({ onCommand }) => {
         type='text'
         value={command}
         onChange={handleChange}
+        onKeyDown={(e) => e.key === 'Enter' && handleCommand(command.trim())}
         placeholder='Enter command'
       />
       <button onClick={() => handleCommand(command.trim())}>Submit</button>

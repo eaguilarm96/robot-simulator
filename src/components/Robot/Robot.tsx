@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
-import { Tabletop } from './components/TableTop/TableTop'
+
+import { RobotPosition, RobotDirection, Command } from '@astrazeneca-eric/types'
+import { moveRobot, rotateRobot, placeRobot } from '@astrazeneca-eric/utils/robotLogic'
+
 import { Controls } from './components/Controls/Controls'
-import { moveRobot, rotateRobot, placeRobot } from '../../utils/robotLogic'
-import { RobotPosition, RobotDirection, Command } from '../../types'
+import { Tabletop } from './components/TableTop/TableTop'
+
 import './Robot.css'
 
 export const Robot: React.FC = () => {
@@ -53,8 +56,11 @@ export const Robot: React.FC = () => {
           )
           break
         default:
-          console.error('Invalid command')
+          setError('Invalid command')
+          break
       }
+    } else {
+      setError('Use PLACE command first')
     }
   }
 

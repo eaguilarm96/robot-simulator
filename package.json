@@ -6,10 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "tsc": "tsc -p ./tsconfig.json --noEmit",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write .",
     "test": "jest"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "bash -c \"tsc -p ./tsconfig.json --noEmit\"",
+      "eslint -c eslint.config.mjs"
+    ]
   },
   "dependencies": {
     "react": "^18.3.1",
