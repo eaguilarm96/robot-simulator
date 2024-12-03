@@ -1,5 +1,5 @@
-import { placeRobot, moveRobot, rotateRobot } from '../utils/robotLogic'
 import { RobotDirection } from '../types'
+import { placeRobot, moveRobot, rotateRobot } from '../utils/robotLogic'
 
 describe('Robot Logic', () => {
   test('PLACE 0,0,NORTH and MOVE should result in 0,1,NORTH', () => {
